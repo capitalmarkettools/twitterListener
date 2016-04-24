@@ -11,4 +11,16 @@
 <template name="listener">
     <button class="btn btn-default" id="start">Start</button>
     <button class="btn btn-default" id="stop">Stop</button>
+    <form class="searchTerms">
+        <strong>Terms for Twitter Feeds: </strong><input type="text" name="searchterm" placeholder="search term"/>
+    </form>
+    <div id="tweets">
+        <ul>
+            {{#each tweets}}
+                <li>
+                    <strong>{{userName}}</strong> /<strong>{{userTweet}}</strong>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
 </template>
